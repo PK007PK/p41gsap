@@ -1,24 +1,32 @@
-import logo from './logo.svg';
-import './App.css';
+import { useContext } from "react";
+import styled from "styled-components";
+import AppProvider, { AppContext } from "./AppContext";
+import Layout from "./components/Layout";
+import GlobalStyles from "./components/styles/GlobalStyles";
+
+const StyledDiv = styled.div`
+  color: var(--black);
+  ${({ theme }) => theme.media.lgAbove} {
+    color: red;
+  }
+`;
+
+const Button = () => {
+  const { toogleIsActive, isActive } = useContext(AppContext);
+  return (
+    <button onClick={toogleIsActive}>{isActive ? "True" : "False"}</button>
+  );
+};
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <AppProvider>
+      <GlobalStyles />
+      <Layout>
+        <StyledDiv>aaa</StyledDiv>
+        <Button />
+      </Layout>
+    </AppProvider>
   );
 }
 
