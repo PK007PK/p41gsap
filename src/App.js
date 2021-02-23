@@ -2,6 +2,7 @@ import { useContext } from "react";
 import styled from "styled-components";
 import AppProvider, { AppContext } from "./AppContext";
 import Layout from "./components/Layout";
+import Menu from "./components/Menu";
 import GlobalStyles from "./components/styles/GlobalStyles";
 import SvgScene from "./components/SvgScene";
 
@@ -23,6 +24,7 @@ function App() {
   return (
     <AppProvider>
       <GlobalStyles />
+      <Menu />
       <Layout>
         <SvgScene />
       </Layout>
