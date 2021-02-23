@@ -3,6 +3,7 @@ import styled from "styled-components";
 import AppProvider, { AppContext } from "./AppContext";
 import Layout from "./components/Layout";
 import GlobalStyles from "./components/styles/GlobalStyles";
+import SvgScene from "./components/SvgScene";
 
 const StyledDiv = styled.div`
   color: var(--black);
@@ -23,8 +24,7 @@ function App() {
     <AppProvider>
       <GlobalStyles />
       <Layout>
-        <StyledDiv>aaa</StyledDiv>
-        <Button />
+        <SvgScene />
       </Layout>
     </AppProvider>
   );
