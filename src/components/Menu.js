@@ -30,22 +30,6 @@ export default function Menu() {
                     className="px-3 py-2 flex items-center text-xs uppercase font-bold leading-snug text-white hover:opacity-75"
                     href="#pablo"
                   >
-                    Discover
-                  </a>
-                </li>
-                <li className="nav-item">
-                  <a
-                    className="px-3 py-2 flex items-center text-xs uppercase font-bold leading-snug text-white hover:opacity-75"
-                    href="#pablo"
-                  >
-                    Profile
-                  </a>
-                </li>
-                <li className="nav-item">
-                  <a
-                    className="px-3 py-2 flex items-center text-xs uppercase font-bold leading-snug text-white hover:opacity-75"
-                    href="#pablo"
-                  >
                     Settings
                   </a>
                 </li>

@@ -5,20 +5,19 @@ export default function SvgScene() {
   const wrapper = useRef(null);
 
   useEffect(() => {
-    const [sceneElements, textBlock] = wrapper.current.children;
+    const [sceneElements] = wrapper.current.children;
     const person = sceneElements.getElementById("Person");
     const task1 = sceneElements.getElementById("Task1");
     const task2 = sceneElements.getElementById("Task2");
     const task3 = sceneElements.getElementById("Task3");
-    const text = textBlock;
 
-    gsap.set([person, task1, task2, task3, text], { autoAlpha: 0 });
+    gsap.set([person, task1, task2, task3, ".textBlock"], { autoAlpha: 0 });
     gsap.set([person, task1, task2, task3], { autoAlpha: 0 });
     gsap.set([task1, task2, task3], { transformOrigin: "50% 50%" });
 
     const texttl = gsap.timeline({ defaults: { ease: "power3.inOut" } });
     texttl.fromTo(
-      text,
+      ".textBlock",
       { x: "+=300" },
       { duration: 1, x: "-=300", autoAlpha: 1 }
     );
@@ -33,7 +32,7 @@ export default function SvgScene() {
   return (
     <div ref={wrapper} className="flex items-center p-20 justify-between">
       <Scene className="mx-auto w-5/12" />
-      <div className="w-6/12 py-10">
+      <div className="w-6/12 py-10 textBlock">
         <h1 className="text-lg font-medium mb-5">
           Excepteur tempor deserunt qui nulla reprehenderit labore minim
           exercitation eiusmod sint excepteur.
