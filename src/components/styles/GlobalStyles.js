@@ -1,12 +1,12 @@
-import { createGlobalStyle } from 'styled-components';
+import { createGlobalStyle } from "styled-components";
 
 const GlobalStyles = createGlobalStyle`
-@font-face {
+/* @font-face {
     font-family: 'radnika_next';
     src: url('/static/radnikanext-medium-webfont.woff2')
     format('woff2');
     font-weight: normal;
-    font-style: normal;
+    font-style: normal; */
 }
 
 html {
@@ -21,7 +21,7 @@ html {
     --bs: 0 12px 24px 0 rgba(0,0,0,0.99);
     
     box-sizing: border-box;
-    font-size: 10px;
+    /* font-size: 10px; */
 }
 
 *, *:before, *:after {
@@ -32,7 +32,7 @@ body {
     font-family: 'radnika_next', --apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
     padding: 0;
     margin: 0;
-    font-size: 1.5em;
+    /* font-size: 1.5em; */
     line-height: 2;
 }
 
@@ -49,4 +49,4 @@ button {
 }
 `;
 
-export default GlobalStyles
+export default GlobalStyles;
