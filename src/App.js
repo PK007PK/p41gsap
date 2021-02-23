@@ -3,6 +3,7 @@ import styled from "styled-components";
 import AppProvider, { AppContext } from "./AppContext";
 import Layout from "./components/Layout";
 import Menu from "./components/Menu";
+import Slider from "./components/Slider";
 import GlobalStyles from "./components/styles/GlobalStyles";
 import SvgScene from "./components/SvgScene";
 
@@ -27,6 +28,7 @@ function App() {
       <Menu />
       <Layout>
         <SvgScene />
+        <Slider />
       </Layout>
     </AppProvider>
   );
