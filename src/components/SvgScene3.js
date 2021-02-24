@@ -3,7 +3,7 @@ import { ReactComponent as Scene } from "../assets/images/scene.svg";
 import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 
-export default function SvgScene() {
+export default function SvgScene3() {
   gsap.registerPlugin(ScrollTrigger);
   const wrapper = useRef(null);
 
@@ -43,12 +43,12 @@ export default function SvgScene() {
       .fromTo(task3, { scale: 0 }, { duration: 0.2, scale: 1, autoAlpha: 1 });
 
     ScrollTrigger.create({
-      trigger: "#svgScene",
+      trigger: "#svgScene3",
       animation: textAnim,
       start: "top center",
     });
     ScrollTrigger.create({
-      trigger: "#svgScene",
+      trigger: "#svgScene3",
       animation: svgAnim,
       start: "top center",
     });
@@ -58,7 +58,7 @@ export default function SvgScene() {
     <div
       ref={wrapper}
       className="flex items-center p-20 justify-between overflow-hidden bg-gray-50"
-      id="svgScene"
+      id="svgScene3"
     >
       <Scene className="mx-auto w-5/12" />
       <div className="w-6/12 py-10">

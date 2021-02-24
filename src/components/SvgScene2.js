@@ -3,7 +3,7 @@ import { ReactComponent as Scene } from "../assets/images/scene.svg";
 import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 
-export default function SvgScene() {
+export default function SvgScene2() {
   gsap.registerPlugin(ScrollTrigger);
   const wrapper = useRef(null);
 
@@ -19,10 +19,10 @@ export default function SvgScene() {
 
     const textAnim = gsap.fromTo(
       textElement,
-      { x: "+=300" },
+      { x: "-=300" },
       {
         duration: 1.5,
-        x: "-=300",
+        x: "+=300",
         autoAlpha: 1,
       }
     );
@@ -31,10 +31,10 @@ export default function SvgScene() {
       .timeline({ defaults: { ease: "power3.inOut" } })
       .fromTo(
         person,
-        { x: "-=300" },
+        { x: "+=300" },
         {
           duration: 1,
-          x: "+=300",
+          x: "-=300",
           autoAlpha: 1,
         }
       )
@@ -43,12 +43,12 @@ export default function SvgScene() {
       .fromTo(task3, { scale: 0 }, { duration: 0.2, scale: 1, autoAlpha: 1 });
 
     ScrollTrigger.create({
-      trigger: "#svgScene",
+      trigger: "#svgScene2",
       animation: textAnim,
       start: "top center",
     });
     ScrollTrigger.create({
-      trigger: "#svgScene",
+      trigger: "#svgScene2",
       animation: svgAnim,
       start: "top center",
     });
@@ -57,8 +57,8 @@ export default function SvgScene() {
   return (
     <div
       ref={wrapper}
-      className="flex items-center p-20 justify-between overflow-hidden bg-gray-50"
-      id="svgScene"
+      className="flex flex-row-reverse items-center p-20 justify-between overflow-hidden bg-gray-50"
+      id="svgScene2"
     >
       <Scene className="mx-auto w-5/12" />
       <div className="w-6/12 py-10">
