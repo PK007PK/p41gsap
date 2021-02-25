@@ -57,14 +57,13 @@ export default function SvgScene() {
   return (
     <div
       ref={wrapper}
-      className="flex items-center p-20 justify-between overflow-hidden bg-gray-50"
+      className="min-h-screen flex flex-col sm:flex-row items-center justify-center overflow-hidden bg-yellow-200"
       id="svgScene"
     >
-      <Scene className="mx-auto w-5/12" />
-      <div className="w-6/12 py-10">
-        <h1 className="text-lg font-medium mb-5">
-          Excepteur tempor deserunt qui nulla reprehenderit labore minim
-          exercitation eiusmod sint excepteur.
+      <Scene className="w-11/12 sm:w-6/12" />
+      <div className="w-11/12  sm:w-4/12 py-10">
+        <h1 className="text-3xl font-medium mb-5">
+          Excepteur tempor deserunt qui nulla reprehenderit
         </h1>
         <p className="text-base">
           Est consectetur proident eu officia magna pariatur eu cupidatat.

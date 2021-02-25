@@ -5,8 +5,8 @@ import Footer from "./components/Footer";
 
 import GlobalStyles from "./components/styles/GlobalStyles";
 import SvgScene from "./components/SvgScene";
-import SvgScene2 from "./components/SvgScene2";
-import SvgScene3 from "./components/SvgScene3";
+import SplitTextComponent from "./components/SplitTextComponent";
+import Toogler from "./components/Toogler";
 
 function App() {
   return (
@@ -15,11 +15,8 @@ function App() {
       <Menu />
       <Layout>
         <SvgScene />
-        <div style={{ height: "100px" }} />
-        <SvgScene2 />
-        <div style={{ height: "100px" }} />
-        <SvgScene3 />
-        <div style={{ height: "100px" }} />
+        <SplitTextComponent />
+        <Toogler />
       </Layout>
       <Footer />
     </AppProvider>
