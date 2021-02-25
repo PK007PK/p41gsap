@@ -1,6 +1,7 @@
 import AppProvider from "./AppContext";
 import Layout from "./components/Layout";
 import Menu from "./components/Menu";
+import Footer from "./components/Footer";
 
 import GlobalStyles from "./components/styles/GlobalStyles";
 import SvgScene from "./components/SvgScene";
@@ -20,6 +21,7 @@ function App() {
         <SvgScene3 />
         <div style={{ height: "100px" }} />
       </Layout>
+      <Footer />
     </AppProvider>
   );
 }
